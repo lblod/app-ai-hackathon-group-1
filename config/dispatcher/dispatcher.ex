@@ -16,15 +16,15 @@ defmodule Dispatcher do
   ###############################################################
 
   match "/activities/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://cache/activities/"
+    Proxy.forward conn, path, "http://resource/activities/"
   end
 
   match "/annotations/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://cache/annotations/"
+    Proxy.forward conn, path, "http://resource/annotations/"
   end
 
   match "/validations/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://cache/validations/"
+    Proxy.forward conn, path, "http://resource/validations/"
   end
 
   ###############################################################
