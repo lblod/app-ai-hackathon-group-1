@@ -12,3 +12,8 @@
 (add-prefix "adms" "http://www.w3.org/ns/adms#")
 (add-prefix "task" "http://redpencil.data.gift/vocabularies/tasks/")
 (add-prefix "schema" "https://schema.org/")
+
+(add-prefix "slimmeraadpleegomgeving" "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#")
+(add-prefix "rdf" "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+(add-prefix "oa" "http://www.w3.org/ns/oa#")
+(add-prefix "vair" "https://w3id.org/vair#")
