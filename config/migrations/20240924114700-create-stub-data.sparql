@@ -5,43 +5,51 @@ PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX slimmeraadpleegomgeving: <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#>
 PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
 PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 
 INSERT DATA {
   GRAPH <http://mu.semte.ch/graphs/public> {
     <http://data.lblod.info/activities/72d3ca21-ff7b-4c08-ac4f-034e07325534> a prov:Activity ;
+      mu:uuid "72d3ca21-ff7b-4c08-ac4f-034e07325534>" ;
       rdf:type <http://mu.semte.ch/vocabularies/ext/LlmProcessing> ;
       slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/f8cda42a-6860-41cb-ad93-d507f5025c3b> ;
       slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/d7be2975-73fe-4a3f-a904-0f4d5d8aa051> ;
       slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/572941ca-2bc2-422a-b0b2-ae049f688326> .
 
     <http://data.lblod.info/annotations/f8cda42a-6860-41cb-ad93-d507f5025c3b> a oa:Annotation ;
+      mu:uuid "f8cda42a-6860-41cb-ad93-d507f5025c3b" ;
       oa:hasBody "You cannot paint the window in purple" ;
       oa:hasTarget <https://id.erfgoed.net/besluiten/14472> ;
       oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/14969> ;
       ext:hasValidation <http://data.lblod.info/validations/b5ba2d31-d4a3-453a-8a25-f096a8861e9e> .
 
-    <http://data.lblod.info/validations/b5ba2d31-d4a3-453a-8a25-f096a8861e9e> a vair:Validation;
+    <http://data.lblod.info/validations/b5ba2d31-d4a3-453a-8a25-f096a8861e9e> a vair:Validation ;
+      mu:uuid "b5ba2d31-d4a3-453a-8a25-f096a8861e9e" ;
       dct:creator <http://data.lblod.info/id/personen/67a8c359-437e-4375-b247-bcde9098ca8b> ;
       dct:created "2024-09-24T02:00:00"^^xsd:dateTime .
 
     <http://data.lblod.info/annotations/d7be2975-73fe-4a3f-a904-0f4d5d8aa051> a oa:Annotation ;
+      mu:uuid "d7be2975-73fe-4a3f-a904-0f4d5d8aa051" ;
       oa:hasBody "You cannot change the roof with black tiles" ;
       oa:hasTarget <https://id.erfgoed.net/besluiten/14472> ;
       oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/14969> ;
       oa:hasTarget <https://id.erfgoed.net/erfgoedobjecten/46703> ;      
       ext:hasValidation <http://data.lblod.info/validations/494c13d4-3eec-413c-89f4-6d20e108af46> .
 
-    <http://data.lblod.info/validations/494c13d4-3eec-413c-89f4-6d20e108af46> a vair:Validation;
+    <http://data.lblod.info/validations/494c13d4-3eec-413c-89f4-6d20e108af46> a vair:Validation ;
+      mu:uuid "494c13d4-3eec-413c-89f4-6d20e108af46" ;
       dct:creator <http://data.lblod.info/id/personen/7415d2e1-7857-42a8-9cba-cd2c945e40f7> ;
       dct:created "2024-09-24T02:00:00"^^xsd:dateTime ;
       ext:dateAccepted "2024-09-24T12:00:00"^^xsd:dateTime .
 
     <http://data.lblod.info/annotations/572941ca-2bc2-422a-b0b2-ae049f688326> a oa:Annotation ;
+      mu:uuid "572941ca-2bc2-422a-b0b2-ae049f688326" ;
       oa:hasBody "You can add a door to the back of the building" ;
       oa:hasTarget <https://id.erfgoed.net/besluiten/101> ;
       ext:hasValidation <http://data.lblod.info/validations/8600b20d-9e5d-4c80-910a-725b3fc5f5b5> .
 
-    <http://data.lblod.info/validations/8600b20d-9e5d-4c80-910a-725b3fc5f5b5> a vair:Validation;
+    <http://data.lblod.info/validations/8600b20d-9e5d-4c80-910a-725b3fc5f5b5> a vair:Validation ;
+      mu:uuid "8600b20d-9e5d-4c80-910a-725b3fc5f5b5" ;
       dct:creator <http://data.lblod.info/id/personen/a4262a19-0a73-49a4-a82f-3eb1441ffb47> ;
       dct:created "2024-09-24T02:00:00"^^xsd:dateTime ;
       ext:dateDenied "2024-09-24T13:00:00"^^xsd:dateTime .
