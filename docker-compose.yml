@@ -43,8 +43,10 @@ services:
   ###
   chat_ui:
     image: lblod/abb-wave-1-group-1-chat-ui-service:latest
+    pull_policy: always
     ports:
       - 7860:7860
+    restart: always
     environment:
       - GRADIO_SERVER_NAME=0.0.0.0
       - OLLAMA_HOST=ollama:11434
@@ -53,11 +55,15 @@ services:
   # The ollama LLM hosting service
   ###
   ollama:
-    image: ollama/ollama
+    image: ollama/ollama:0.3.11
     ports:
       - 11434:11434
+    restart: always
     environment:
       - OLLAMA_HOST=0.0.0.0
-#    volumes:
-#      - ollama:/root/.ollama # volume for persisting model downloads after container reboots, models can vary from 0...500GBs
+    volumes:
+      - ollama_model_store:/root/.ollama # volume for persisting model downloads after container reboots, models can vary from 0...500GBs
 
+
+volumes:
+  ollama_model_store:
