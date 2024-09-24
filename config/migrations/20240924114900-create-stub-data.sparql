@@ -8,7 +8,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 
 INSERT DATA {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/application> {
     <http://data.lblod.info/activities/72d3ca21-ff7b-4c08-ac4f-034e07325534> a prov:Activity ;
       mu:uuid "72d3ca21-ff7b-4c08-ac4f-034e07325534>" ;
       rdf:type <http://mu.semte.ch/vocabularies/ext/LlmProcessing> ;
