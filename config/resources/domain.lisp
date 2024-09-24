@@ -17,7 +17,7 @@
   :class (s-prefix "prov:Activity")
   :properties `((:type :url ,(s-prefix "rdf:type")))
   :has-one `((annotation :via ,(s-prefix "slimmeraadpleegomgeving:Activiteit.genereertAnnotatie")
-                   :as "annotation"))
+                         :as "annotation"))
   :resource-base (s-url "http://data.lblod.info/activities/")
   :features `(include-uri)
   :on-path "activities")
@@ -27,7 +27,10 @@
   :properties `((:body :string ,(s-prefix "oa:hasBody"))
                 (:resource :url ,(s-prefix "oa:hasTarget")))
   :has-one `((validation :via ,(s-prefix "ext:hasValidation")
-                   :as "validation"))
+                         :as "validation")
+             (activity :via ,(s-prefix "slimmeraadpleegomgeving:Activiteit.genereertAnnotatie")
+                       :inverse t
+                       :as "activity"))
   ;; If we had more time, the hasTarget relationship should link to a Resource via a hasMany relationship
   ;; For the sake of simplicity during the hackaton, we take a shotcut and just set it as a property
   ;; :has-many `((resource :via ,(s-prefix "oa:hasTarget")
@@ -46,6 +49,9 @@
                 (:created :datetime ,(s-prefix "dct:created"))
                 (:accepted :datetime ,(s-prefix "dct:dateAccepted"))
                 (:denied :datetime ,(s-prefix "ext:dateDenied")))
+  :has-one `((annotation :via, (s-prefix "ext:hasValidation")
+                         :inverse t
+                         :as "annotation"))
   :resource-base (s-url "http://data.lblod.info/validations/")
   :features `(include-uri)
   :on-path "validations")
