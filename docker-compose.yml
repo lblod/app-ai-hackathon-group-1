@@ -37,11 +37,6 @@ services:
   frontend:
     image: lblod/frontend-ai-hackathon-group-1:latest # In real life, it would be a fixed version
     restart: always
-  cache:
-    image: semtech/mu-cache:2.0.2
-    links:
-      - resource:backend
-    restart: always
 
   ###
   # The chat UI is the gradio web interface that enables quick and easy access to interacitons with LLMs
