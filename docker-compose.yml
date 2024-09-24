@@ -52,7 +52,7 @@ services:
       - 7860:7860
     environment:
       - GRADIO_SERVER_NAME=0.0.0.0
-      - OLLAMA_HOST=http://ollama
+      - OLLAMA_HOST=ollama:11434
 
   ###
   # The ollama LLM hosting service
