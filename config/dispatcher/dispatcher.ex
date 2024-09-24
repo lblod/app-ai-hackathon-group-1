@@ -1,14 +1,31 @@
 defmodule Dispatcher do
   use Matcher
-  define_accept_types [
+
+  define_accept_types(
     html: ["text/html", "application/xhtml+html"],
     json: ["application/json", "application/vnd.api+json"],
     upload: ["multipart/form-data"],
     sparql_json: ["application/sparql-results+json"],
-    any: [ "*/*" ],
-  ]
+    any: ["*/*"]
+  )
 
-  define_layers [ :api, :frontend, :not_found ]
+  define_layers([:api_services, :api, :frontend, :not_found])
+
+  ###############################################################
+  # domain.json
+  ###############################################################
+
+  match "/activities/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/activities/"
+  end
+
+  match "/annotations/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/annotations/"
+  end
+
+  match "/validations/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/validations/"
+  end
 
   ###############################################################
   # frontend layer
