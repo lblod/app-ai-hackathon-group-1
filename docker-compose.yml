@@ -43,3 +43,26 @@ services:
       - resource:backend
     restart: always
 
+  ###
+  # The chat UI is the gradio web interface that enables quick and easy access to interacitons with LLMs
+  ###
+  chat_ui:
+    image: lblod/abb-wave-1-group-1-chat-ui-service:latest
+    ports:
+      - 7860:7860
+    environment:
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - OLLAMA_HOST=http://ollama
+
+  ###
+  # The ollama LLM hosting service
+  ###
+  ollama:
+    image: ollama/ollama
+    ports:
+      - 11434:11434
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    volumes:
+      - ollama:/root/.ollama # volume for persisting model downloads after container reboots, models can vary from 0...500GBs
+
