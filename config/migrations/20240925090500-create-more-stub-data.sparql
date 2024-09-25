@@ -1,0 +1,73 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX vair: <https://w3id.org/vair#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX slimmeraadpleegomgeving: <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/application> {
+    <http://data.lblod.info/activities/820bf9f7-fcdf-4f53-8bf9-585a2a262942> a prov:Activity ;
+      mu:uuid "820bf9f7-fcdf-4f53-8bf9-585a2a262942>" ;
+      rdf:type <http://mu.semte.ch/vocabularies/ext/LlmProcessing> ;
+      slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/cc802711-0315-491f-8fa2-3e8831e68674> ;
+      slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/0eebe2ce-80b1-4f67-969c-6b4acf393b35> ;
+      slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/40a5f86e-6f1e-4229-b1c7-0aa720ac23c3> ;
+      slimmeraadpleegomgeving:Activiteit.genereertAnnotatie <http://data.lblod.info/annotations/73409834-1488-4e30-a7fd-910068d299cb> .
+
+    # Example with a maintenance plan: 14167
+    <http://data.lblod.info/annotations/cc802711-0315-491f-8fa2-3e8831e68674> a oa:Annotation ;
+      mu:uuid "cc802711-0315-491f-8fa2-3e8831e68674" ;
+      oa:hasBody "You can't demolish the building." ;
+      oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/14167> ;
+      oa:hasTarget <https://id.erfgoed.net/plannen/1635> ;
+      oa:hasTarget <https://id.erfgoed.net/besluiten/4250> ;
+      ext:hasValidation <http://data.lblod.info/validations/04a35e0e-cef0-4a62-b9d3-3ca203528da1> .
+
+    <http://data.lblod.info/validations/04a35e0e-cef0-4a62-b9d3-3ca203528da1> a vair:Validation ;
+      mu:uuid "04a35e0e-cef0-4a62-b9d3-3ca203528da1" ;
+      dct:creator <http://data.lblod.info/id/personen/67a8c359-437e-4375-b247-bcde9098ca8b> ;
+      dct:created "2024-09-25T09:00:00"^^xsd:dateTime .
+
+    # Example after 2015: 31061
+    <http://data.lblod.info/annotations/0eebe2ce-80b1-4f67-969c-6b4acf393b35> a oa:Annotation ;
+      mu:uuid "0eebe2ce-80b1-4f67-969c-6b4acf393b35" ;
+      oa:hasBody "You can't add a floor to the building." ;
+      oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/31061> ;
+      oa:hasTarget <https://id.erfgoed.net/besluiten/5825> ;
+      ext:hasValidation <http://data.lblod.info/validations/f8e9b1ad-b3d4-47b4-b7fa-9162469cb8c5> .
+
+    <http://data.lblod.info/validations/f8e9b1ad-b3d4-47b4-b7fa-9162469cb8c5> a vair:Validation ;
+      mu:uuid "f8e9b1ad-b3d4-47b4-b7fa-9162469cb8c5" ;
+      dct:creator <http://data.lblod.info/id/personen/67a8c359-437e-4375-b247-bcde9098ca8b> ;
+      dct:created "2024-09-25T09:00:00"^^xsd:dateTime .
+
+    # Example with actions in decision: 34145
+    <http://data.lblod.info/annotations/40a5f86e-6f1e-4229-b1c7-0aa720ac23c3> a oa:Annotation ;
+      mu:uuid "40a5f86e-6f1e-4229-b1c7-0aa720ac23c3" ;
+      oa:hasBody "You can't demolish the building." ;
+      oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/34145> ;
+      oa:hasTarget <https://id.erfgoed.net/besluiten/5825> ;
+      ext:hasValidation <http://data.lblod.info/validations/3d230911-79cc-45de-809b-beb5b2bab6d9> .
+
+    <http://data.lblod.info/validations/3d230911-79cc-45de-809b-beb5b2bab6d9> a vair:Validation ;
+      mu:uuid "3d230911-79cc-45de-809b-beb5b2bab6d9" ;
+      dct:creator <http://data.lblod.info/id/personen/67a8c359-437e-4375-b247-bcde9098ca8b> ;
+      dct:created "2024-09-25T09:00:00"^^xsd:dateTime .
+
+    # Example before 2015: 135025
+    <http://data.lblod.info/annotations/73409834-1488-4e30-a7fd-910068d299cb> a oa:Annotation ;
+      mu:uuid "73409834-1488-4e30-a7fd-910068d299cb" ;
+      oa:hasBody "You can't add a floor to the building." ;
+      oa:hasTarget <https://id.erfgoed.net/aanduidingsobjecten/135025> ;
+      oa:hasTarget <https://id.erfgoed.net/besluiten/15002> ;
+      ext:hasValidation <http://data.lblod.info/validations/258ebe2a-b16f-49e3-a058-93cc8200adb6> .
+
+    <http://data.lblod.info/validations/258ebe2a-b16f-49e3-a058-93cc8200adb6> a vair:Validation ;
+      mu:uuid "258ebe2a-b16f-49e3-a058-93cc8200adb6" ;
+      dct:creator <http://data.lblod.info/id/personen/67a8c359-437e-4375-b247-bcde9098ca8b> ;
+      dct:created "2024-09-25T09:00:00"^^xsd:dateTime .
+  }
+}
