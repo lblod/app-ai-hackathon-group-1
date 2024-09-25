@@ -25,7 +25,7 @@
 (define-resource annotation ()
   :class (s-prefix "oa:Annotation")
   :properties `((:body :string ,(s-prefix "oa:hasBody"))
-                (:resource :url ,(s-prefix "oa:hasTarget")))
+                (:resource :uri-set ,(s-prefix "oa:hasTarget")))
   :has-one `((validation :via ,(s-prefix "ext:hasValidation")
                          :as "validation")
              (activity :via ,(s-prefix "slimmeraadpleegomgeving:Activiteit.genereertAnnotatie")
