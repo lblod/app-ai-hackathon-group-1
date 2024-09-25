@@ -15,7 +15,8 @@
 
 (define-resource activity ()
   :class (s-prefix "prov:Activity")
-  :properties `((:type :url ,(s-prefix "rdf:type")))
+  :properties `((:type :url ,(s-prefix "rdf:type"))
+                 :designation :url, ,(s-prefix "ext:designation"))
   :has-many `((annotation :via ,(s-prefix "slimmeraadpleegomgeving:Activiteit.genereertAnnotatie")
                           :as "annotations"))
   :resource-base (s-url "http://data.lblod.info/activities/")
