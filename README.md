@@ -2,7 +2,13 @@
 
 The backend stack for our AI hackaton!
 
+
 With love, group 1
+
+## Technical sidenote:
+This stack is deployed on the provided VM, only using a fraction of the provided resources.
+MEMORY: peaked at about 8-9 GB
+CPU: mostly irrelevant, this impacts the speed of the predictions. (could even run on one core, if you are patient ;-) )
 
 ## Quickstart an mu-project
 
