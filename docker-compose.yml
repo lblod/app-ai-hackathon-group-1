@@ -50,7 +50,7 @@ services:
     environment:
       - GRADIO_SERVER_NAME=0.0.0.0
       - OLLAMA_HOST=ollama:11434
-      - DB_HOST=database:8890
+      - DB_HOST=identifier:80
 
   ###
   # The ollama LLM hosting service
